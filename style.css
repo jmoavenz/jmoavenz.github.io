@@ -13,7 +13,7 @@ a {
 /* Define Variables */
 :root {
     --bright-green: #00fc82;
-    --soft-green: #00cc66;
+    --soft-green: #00cc66; /* 66D37E */
     --timeline-grey: #a3a3a3;
     --grey-text: #808080;
     --lightgrey-background: #eeeeee;
