@@ -10,6 +10,13 @@ a {
     text-decoration: inherit;
 }
 
+/* Define Variables */
+:root {
+    /* TODO use these throughout */
+    --bright-green: #00fc82;
+    --soft-green: #00cc66;
+}
+
 /************* Mobile ************/
 
 
@@ -105,7 +112,7 @@ main > section > h1 {
 }
 
 main > section > h1 + .underline {
-    border: 2px solid #00fc82;
+    border: 1px solid #00fc82;
     margin: auto;
     width: 200px;
 }
@@ -247,6 +254,7 @@ main > section > .container {
 
 #resume .timeline > ul > li > ul {
     line-height: 1.5em;
+    list-style-type: none;
 }
 
 #resume .timeline > ul > li > ul > li {
@@ -255,6 +263,7 @@ main > section > .container {
 
 #resume .timeline > ul > li > ul > li > ul > li {
     list-style-type: disc;
+    /*list-style-type: circle;*/
 }
 
 

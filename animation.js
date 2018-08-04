@@ -5,10 +5,10 @@ $(document).ready(function() {
     var skills = initSkills();
     animateSkills(skills); // TODO animate when scrolling
 
+
+    updateParallax();
     $(window).scroll(function() {
-        applyParallax('header', 0.5);
-        applyParallax('#blockquote', 0.5);
-        applyParallax('#contact', 0.5);
+        updateParallax();
     });
 
 });
@@ -91,6 +91,12 @@ function animateSkills(skills) {
         var progress = skills[key].progress;
         bar.animate(progress);
     });
+}
+
+function updateParallax() {
+    applyParallax('header', 0.5);
+    applyParallax('#blockquote', 0.5);
+    applyParallax('#contact', 0.5);
 }
 
 function applyParallax(selector, factor) {
