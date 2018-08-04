@@ -12,9 +12,11 @@ a {
 
 /* Define Variables */
 :root {
-    /* TODO use these throughout */
     --bright-green: #00fc82;
     --soft-green: #00cc66;
+    --timeline-grey: #a3a3a3;
+    --grey-text: #808080;
+    --lightgrey-background: #eeeeee;
 }
 
 /************* Mobile ************/
@@ -38,7 +40,7 @@ header {
 
 header::before {
     content: "";
-    background-color: #00fc82;
+    background-color: var(--bright-green);
     opacity: 0.8;
     height: 75vh;
     width: 100%;
@@ -76,7 +78,7 @@ header nav {
 }
 
 header nav a {
-    color: #00fc82;
+    color: var(--bright-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +114,7 @@ main > section > h1 {
 }
 
 main > section > h1 + .underline {
-    border: 1px solid #00fc82;
+    border: 1px solid var(--bright-green);
     margin: auto;
     width: 200px;
 }
@@ -152,7 +154,7 @@ main > section > .container {
 }
 
 #about ul > li > p {
-    color: grey;
+    color: var(--grey-text);
 }
 
 
@@ -196,7 +198,7 @@ main > section > .container {
     padding: 1em;
     width: max-content;
     border-radius: 12px;
-    background-color: #a3a3a3;
+    background-color: var(--timeline-grey);
     color: white;
     font-weight: lighter;
     margin: 0;
@@ -213,7 +215,7 @@ main > section > .container {
     padding-top: 30px;
     padding-bottom: 70px;
     padding-left: 50px;
-    border-left: 1px solid #a3a3a3;
+    border-left: 1px solid var(--timeline-grey);
     position: relative;
 }
 
@@ -236,7 +238,7 @@ main > section > .container {
     position: absolute;
     left: -25px;
     margin-top: 20px;
-    background-color: #00fc82;
+    background-color: var(--bright-green);
     border-radius: 50%;
 }
 
@@ -256,7 +258,7 @@ main > section > .container {
 
 #resume .timeline > ul > li > h5 {
     font-size: 16px;
-    color: grey;
+    color: var(--grey-text);
     margin-top: 0;
 }
 
@@ -280,9 +282,9 @@ main > section > .container {
 /* Projects */
 
 #projects {
-    /*background-color: #00fc82;
+    /*background-color: var(--bright-green);
     color: white;*/
-    background-color: #eee;
+    background-color: var(--lightgrey-background);
     color: black;
 }
 
@@ -299,7 +301,6 @@ main > section > .container {
     height: 580px;
     background-color: white;
     text-align: center;
-    color: grey;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 2px 6px -2px grey;
@@ -339,6 +340,7 @@ main > section > .container {
 }
 
 #projects .card h2 {
+    color: var(--grey-text);
     padding: 0.5em;
     transition: all 300ms ease-in-out;
 }
@@ -376,7 +378,7 @@ main > section > .container {
 }
 
 #projects .card:hover h2 {
-    color: #00fc82;
+    color: var(--bright-green);
 }
 
 #projects .card:hover .photo-container > img {
@@ -389,8 +391,8 @@ main > section > .container {
 
 /*#projects .card:hover .btn {
     color: white;
-    background-color: #00fc82;
-    border-color: #00fc82;
+    background-color: var(--bright-green);
+    border-color: var(--bright-green);
 }*/
 
 
@@ -487,7 +489,7 @@ main > section > .container {
 }
 
 #contact form input[type="submit"] {
-    background-color: #00fc82;
+    background-color: var(--bright-green);
     opacity: 1;
     color: white;
     letter-spacing: 1px;
@@ -495,7 +497,7 @@ main > section > .container {
 }
 
 #contact form input[type="submit"]:hover {
-    background-color: #00cc66;
+    background-color: var(--soft-green);
 }
 
 #contact nav {
@@ -503,7 +505,7 @@ main > section > .container {
 }
 
 #contact nav a {
-    color: #00fc82;
+    color: var(--bright-green);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -536,7 +538,7 @@ main > section > .container {
 }
 
 .resume-btn:hover {
-    background-color: #eee;
+    background-color: var(--lightgrey-background);
     color: black;
 }
 
@@ -550,7 +552,7 @@ footer {
 }
 
 footer p {
-    color: grey;
+    color: var(--grey-text);
     font-size: 11px;
 }
 
@@ -690,7 +692,7 @@ footer p {
 
     #resume .timeline > ul > li.left {
         border-left: none;
-        border-right: 1px solid #a3a3a3;
+        border-right: 1px solid var(--timeline-grey);
         padding-right: 50px;
         padding-left: 0;
     }
