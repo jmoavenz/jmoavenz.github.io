@@ -406,11 +406,11 @@ main > section > .container {
 }
 
 #skills ul > li {
-  margin: 30px;
-  width: 200px;
-  height: 200px;
-  position: relative;
-  text-align: center;
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    text-align: center;
 }
 
 #skills ul > li > h3 {
@@ -418,6 +418,10 @@ main > section > .container {
     width: 100%;
     top: 25%;
     font-size: 22px;
+}
+
+#skills .bar {
+    display: none;
 }
 
 
@@ -584,6 +588,32 @@ footer p {
     #projects ul {
         grid-template-columns: 1fr 1fr;
     }
+
+    /* Skills */
+
+    /*#skills ul > li {
+      margin: 30px;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      text-align: center;
+    }
+
+    #skills ul > li > h3 {
+        position: absolute;
+        width: 100%;
+        top: 25%;
+        font-size: 22px;
+    }
+
+    #skills .circle {
+        display: initial;
+    }
+
+    #skills .bar {
+        display: none;
+    }*/
+
 
     /* Contact */
 

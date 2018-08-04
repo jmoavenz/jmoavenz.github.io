@@ -45,50 +45,67 @@ function initSkills() {
     }
 
     Object.keys(skills).map(function(key, index) {
-        var container = key;
-        var progress = skills[key].progress;
+        var selector = key;
 
-        var bar = new ProgressBar.Circle(container, {
-            strokeWidth: 3,
-            trailWidth: 3,
-            easing: 'easeInOut',
-            duration: 1400,
-            text: {
-                autoStyleContainer: false,
-                style: {
-                    color: '#aaa',
-                    fontSize: '22px',
-                    position: 'absolute',
-                    top: '55%',
-                    width: '100%', 
-                },
-            },
+        var circle = createProgressBarCircle(selector);
+        skills[key].circle = circle;
 
-            from: {color: '#aaa', opacity: 0.1},
-            to: {color: '#00fc82', opacity: 1},
-            step: function(state, circle) {
-                circle.path.setAttribute('stroke', state.color);
-                circle.path.setAttribute('opacity', state.opacity);
-
-                var value = Math.round(circle.value() * 100);
-                if (value === 0) {
-                    circle.setText('');
-                } else {
-                    circle.setText(value+'%');
-                }
-            },
-        });
-
+        var bar = createProgressBarLine(selector);
         skills[key].bar = bar;
     });
 
     return skills;
 }
 
+function createProgressBarCircle(selector) {
+    return new ProgressBar.Circle(selector+' .circle', getProgressBarStyle());
+}
+
+function createProgressBarLine(selector) {
+    return new ProgressBar.Line(selector+' .bar', getProgressBarStyle());
+}
+
+function getProgressBarStyle() {
+    return {
+        strokeWidth: 3,
+        trailWidth: 3,
+        easing: 'easeInOut',
+        duration: 1400,
+        text: {
+            autoStyleContainer: false,
+            style: { // TODO move text styling to css by using className
+                color: '#aaa',
+                fontSize: '22px',
+                position: 'absolute',
+                top: '55%',
+                width: '100%', 
+            },
+        },
+
+        from: {color: '#aaa', opacity: 0.1},
+        to: {color: '#00fc82', opacity: 1},
+        step: function(state, circle) {
+            circle.path.setAttribute('stroke', state.color);
+            circle.path.setAttribute('opacity', state.opacity);
+
+            var value = Math.round(circle.value() * 100);
+            if (value === 0) {
+                circle.setText('');
+            } else {
+                circle.setText(value+'%');
+            }
+        },
+    };
+}
+
 function animateSkills(skills) {
     Object.keys(skills).map(function(key, index) {
-        var bar = skills[key].bar;
         var progress = skills[key].progress;
+
+        var circle = skills[key].circle;
+        circle.animate(progress);
+
+        var bar = skills[key].bar;
         bar.animate(progress);
     });
 }
