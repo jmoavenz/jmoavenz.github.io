@@ -1,0 +1,649 @@
+
+/* General */
+body {
+    margin: 0px;
+    font-family: "Montserrat";
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/************* Mobile ************/
+
+
+/* Header */
+
+header {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./images/lighthouse-cropped-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left 0;
+    background-attachment: fixed;
+    color: white;
+}
+
+header::before {
+    content: "";
+    background-color: #00fc82;
+    opacity: 0.8;
+    height: 75vh;
+    width: 100%;
+    position: absolute;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 1em;
+    margin-top: -100px;
+}
+
+header h1,h2,nav,img {
+    z-index: 1;
+    line-height: 0px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 0 white;
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+header h2 {
+    font-size: 18px;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav a {
+    color: #00fc82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0.75;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 2px;
+    font-size: 18px;
+    transition: all 200ms ease-in-out;
+}
+
+header nav a:hover {
+    opacity: 1;
+}
+
+
+/* Main: General; */
+
+main > section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+main > section > h1 {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0px;
+    letter-spacing: 2px;
+}
+
+main > section > h1 + .underline {
+    border: 2px solid #00fc82;
+    margin: auto;
+    width: 200px;
+}
+
+main > section > .container {
+    margin: 80px 0px;
+}
+
+
+/* About Me */
+
+#about #bio > h2 {
+    font-size: 2em;
+    font-weight: lighter;
+    margin: 50px 0;
+}
+
+#about #bio > p {
+    margin: 30px 0;
+    line-height: 1.5em;
+}
+
+#about ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 60px;
+}
+
+#about ul > li {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+    align-items: center;
+    line-height: 0;
+    margin: 20px 0;
+}
+
+#about ul > li > p {
+    color: grey;
+}
+
+
+
+/* Block quote */
+
+#blockquote {
+    text-align: center;
+    color: white;
+    font-size: larger;
+    background-image: url('./blockquote-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 100px 10vw;
+}
+
+#blockquote blockquote {
+    font-size: 16px;
+    color: #d3d3d3;
+}
+
+#blockquote span {
+    font-size: 30px;
+    color: white;
+}
+
+
+
+/* Resume */
+
+#resume h2 {
+    text-align: center;
+    padding: 1em;
+    width: max-content;
+    border-radius: 12px;
+    background-color: #a3a3a3;
+    color: white;
+    font-weight: lighter;
+    margin: 0;
+}
+
+#resume .timeline > ul {
+    list-style-type: none;
+    margin: 0;
+    margin-left: 25px;
+    padding-left: 0;
+}
+
+#resume .timeline > ul > li {
+    padding-top: 30px;
+    padding-bottom: 70px;
+    padding-left: 50px;
+    border-left: 1px solid #a3a3a3;
+    position: relative;
+}
+
+#resume .timeline > ul > li:first-child {
+    padding-top: 60px;
+}
+
+#resume .timeline > ul > li:last-child {
+    padding-bottom: 100px;
+}
+
+#resume .timeline > ul > li > i {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left: -25px;
+    margin-top: 20px;
+    background-color: #00fc82;
+    border-radius: 50%;
+}
+
+#resume .timeline > ul > li > h3 {
+    font-weight: normal;
+    font-size: 30px;
+    margin: 0;
+}
+
+#resume .timeline > ul > li > h4 {
+    font-weight: bold;
+    text-shadow: 1px 0 black;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+#resume .timeline > ul > li > h5 {
+    font-size: 16px;
+    color: grey;
+    margin-top: 0;
+}
+
+#resume .timeline > ul > li > ul {
+    line-height: 1.5em;
+}
+
+#resume .timeline > ul > li > ul > li {
+    padding-bottom: 10px;
+}
+
+#resume .timeline > ul > li > ul > li > ul > li {
+    list-style-type: disc;
+}
+
+
+
+
+/* Projects */
+
+#projects {
+    /*background-color: #00fc82;
+    color: white;*/
+    background-color: #eee;
+    color: black;
+}
+
+#projects ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding-left: 0;
+}
+
+#projects ul > .card {
+    width: 100%;
+    height: 580px;
+    background-color: white;
+    text-align: center;
+    color: grey;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 6px -2px grey;
+    position: relative;
+    transition: all 200ms ease-in-out;
+}
+
+#projects .card .photo-container {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+#projects .card .photo-container > img {
+    object-fit: cover;
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+
+#projects .card .photo-container > .tint {
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+}
+
+#projects .card .content-container {
+    flex-grow: 1;
+    padding: 15px;
+    position: relative;
+}
+
+#projects .card h2 {
+    padding: 0.5em;
+    transition: all 300ms ease-in-out;
+}
+
+#projects .card p {
+    color: black;
+    line-height: 1.5em;
+}
+
+#projects .card .btn {
+    width: max-content;
+    padding: 0.5em 3em;
+    border: 1px solid black; /*background-color instead of border?*/
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 30px;
+    transition: all 300ms ease-in-out;
+}
+
+#projects .card a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#projects .card:hover {
+    transform: translate(0, -4px);
+    box-shadow: 0px 4px 18px -2px grey;
+}
+
+#projects .card:hover h2 {
+    color: #00fc82;
+}
+
+#projects .card:hover .photo-container > img {
+    transform: scale(1.1);
+}
+
+#projects .card:hover .photo-container > .tint {
+    opacity: 0.3;
+}
+
+/*#projects .card:hover .btn {
+    color: white;
+    background-color: #00fc82;
+    border-color: #00fc82;
+}*/
+
+
+/* Skills */
+
+#skills ul {
+    padding-left: 0px;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#skills ul > li {
+  margin: 30px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  text-align: center;
+}
+
+#skills ul > li > h3 {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    font-size: 22px;
+}
+
+
+
+
+/* Contact */
+
+#contact {
+    background-image: url('./blockquote-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+#contact h1 {
+    margin-bottom: 70px;
+}
+
+#contact ul {
+    list-style-type: none;
+    font-size: 14px;
+    opacity: 0.7;
+    margin: 40px 0;
+    padding-left: 0;
+}
+
+#contact ul > li {
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+#contact ul > li > i {
+    margin-right: 10px;
+}
+
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#contact form input,
+#contact form textarea {
+    box-sizing: border-box;
+    width: 90vw;
+    border: none;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    opacity: 0.4;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    opacity: 1;
+    outline: none;
+}
+
+#contact form input[type="submit"] {
+    background-color: #00fc82;
+    opacity: 1;
+    color: white;
+    letter-spacing: 1px;
+    transition: all 200ms ease-in-out;
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #00cc66;
+}
+
+#contact nav {
+    display: flex;
+}
+
+#contact nav a {
+    color: #00fc82;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    opacity: 0.75;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 4px;
+    font-size: 18px;
+    transition: all 200ms ease-in-out;
+}
+
+#contact nav a:hover {
+    opacity: 1;
+}
+
+.resume-btn-container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.resume-btn {
+    border: 1px solid white;
+    border-radius: 5px;
+    width: max-content;
+    padding: 1em 3em;
+    margin: auto;
+    transition: all 200ms ease-in-out;
+}
+
+.resume-btn:hover {
+    background-color: #eee;
+    color: black;
+}
+
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 50px;
+}
+
+footer p {
+    color: grey;
+    font-size: 11px;
+}
+
+
+/************* Desktop *************/
+@media only screen and (min-width: 800px) {
+
+    /* Header */
+
+    header h1 {
+        font-size: 50px;
+    }
+
+    header img {
+        margin-top: 0px;
+    }
+
+    /* Main: General */
+
+    main > section > .container {
+        max-width: 1200px;
+        margin: 80px auto;
+    }
+
+
+    /* About */
+
+    #about .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column-gap: 30px;
+    }
+
+
+    /* Blockquote */
+
+
+    /* Resume */
+
+    #resume h2 {
+        margin: auto;
+    }
+
+    #resume .timeline > ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    #resume .timeline > ul > li {
+        box-sizing: border-box;
+        width: 50%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    #resume .timeline > ul > li.right {
+        align-self: flex-end;
+        margin-right: 1px; /* offset border width */
+    }
+
+    #resume .timeline > ul > li.left {
+        border-left: none;
+        border-right: 1px solid #a3a3a3;
+        padding-right: 50px;
+        padding-left: 0;
+    }
+
+    #resume .timeline > ul > li.left h3,
+    #resume .timeline > ul > li.left h4,
+    #resume .timeline > ul > li.left h5 {
+        text-align: right;
+    }
+
+    #resume .timeline > ul > li.left > i {
+        left: auto;
+        right: -25px;
+    }
+
+
+    /* Projects */
+
+    #projects ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    /* Skills */
+
+
+
+    /* Contact */
+
+    #contact > .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 16px;
+    }
+
+    #contact form input,
+    #contact form textarea {
+        width: 100%;
+    }
+
+    #contact form > div {
+        text-align: center;
+    }
+
+    #contact .resume-btn-container {
+        grid-column: 2 / span 1;
+        width: 50%;
+    }
+
+}
