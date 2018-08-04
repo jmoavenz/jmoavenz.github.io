@@ -317,6 +317,7 @@ main > section > .container {
 #projects .card .photo-container > img {
     object-fit: cover;
     width: 100%;
+    height: 100%;
     transition: all 300ms ease-in-out;
 }
 
