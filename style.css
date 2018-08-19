@@ -12,8 +12,8 @@ a {
 
 /* Define Variables */
 :root {
-    --bright-green: #00fc82;
-    --soft-green: #00cc66; /* 66D37E */
+    --bright-green: #44da82;
+    --soft-green: #00cc66;
     --timeline-grey: #a3a3a3;
     --grey-text: #808080;
     --lightgrey-background: #eeeeee;
@@ -33,7 +33,6 @@ header {
     background-image: url('./images/lighthouse-cropped-2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: left 0;
     background-attachment: fixed;
     color: white;
 }
@@ -165,7 +164,8 @@ main > section > .container {
     text-align: center;
     color: white;
     font-size: larger;
-    background-image: url('./blockquote-bg.jpg');
+    /*background-image: url('./images/shark-fin-cove-cropped-2.jpg');*/
+    background-image: url('./images/shark-fin-cove-2-cropped.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -227,7 +227,7 @@ main > section > .container {
     padding-bottom: 100px;
 }
 
-#resume .timeline > ul > li > i {
+#resume .timeline .timeline-entry i {
     color: white;
     display: flex;
     justify-content: center;
@@ -242,13 +242,13 @@ main > section > .container {
     border-radius: 50%;
 }
 
-#resume .timeline > ul > li > h3 {
+#resume .timeline .timeline-entry h3 {
     font-weight: normal;
     font-size: 30px;
     margin: 0;
 }
 
-#resume .timeline > ul > li > h4 {
+#resume .timeline .timeline-entry h4 {
     font-weight: bold;
     text-shadow: 1px 0 black;
     font-size: 18px;
@@ -256,22 +256,22 @@ main > section > .container {
     margin: 0;
 }
 
-#resume .timeline > ul > li > h5 {
+#resume .timeline .timeline-entry h5 {
     font-size: 16px;
     color: var(--grey-text);
     margin-top: 0;
 }
 
-#resume .timeline > ul > li > ul {
+#resume .timeline .timeline-entry ul {
     line-height: 1.5em;
     list-style-type: none;
 }
 
-#resume .timeline > ul > li > ul > li {
+#resume .timeline .timeline-entry ul > li {
     padding-bottom: 10px;
 }
 
-#resume .timeline > ul > li > ul > li > ul > li {
+#resume .timeline .timeline-entry ul > li > ul > li {
     list-style-type: disc;
     /*list-style-type: circle;*/
 }
@@ -432,16 +432,12 @@ main > section > .container {
 /* Contact */
 
 #contact {
-    background-image: url('./blockquote-bg.jpg');
+    background-image: url('./images/lake-house-cropped.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: white;
     background-color: black; /* temp fix for mobile parallax bug */
-}
-
-#contact h1 {
-    margin-bottom: 70px;
 }
 
 #contact ul {
@@ -485,7 +481,7 @@ main > section > .container {
 
 #contact form input:focus,
 #contact form textarea:focus {
-    opacity: 1;
+    opacity: 0.85;
     outline: none;
 }
 
@@ -510,8 +506,8 @@ main > section > .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
-    opacity: 0.75;
+    background-color: rgba(255,255,255,0.75);
+    /*opacity: 0.75;*/
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -521,7 +517,8 @@ main > section > .container {
 }
 
 #contact nav a:hover {
-    opacity: 1;
+    /*opacity: 1;*/
+    background-color: rgba(255,255,255,1);
 }
 
 
@@ -538,7 +535,8 @@ main > section > .container {
 
 .resume-btn:hover {
     background-color: var(--lightgrey-background);
-    color: black;
+    /*color: black;*/
+    color: var(--soft-green);
 }
 
 
@@ -702,7 +700,7 @@ footer p {
         text-align: right;
     }
 
-    #resume .timeline > ul > li.left > i {
+    #resume .timeline > ul > li.left i {
         left: auto;
         right: -25px;
     }

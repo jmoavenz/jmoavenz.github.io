@@ -3,12 +3,13 @@
 $(document).ready(function() {
 
     var skills = initSkills();
-    animateSkills(skills); // TODO animate when scrolling
-
+    animateSkills(skills); // TODO animate when scrolling, fold into other functions
 
     updateParallax();
+    initAnimations();
     $(window).scroll(function() {
         updateParallax();
+        animateElements();
     });
 
 });
@@ -36,10 +37,7 @@ function initSkills() {
         '#html': {
             progress: 0.76,
         },
-        // '#linux': {
-        //     progress: 0.74,
-        // },
-        '#matlab': {
+        '#js': {
             progress: 0.70,
         },
     }
@@ -83,7 +81,7 @@ function getProgressBarStyle() {
         },
 
         from: {color: '#aaa', opacity: 0.1},
-        to: {color: '#00fc82', opacity: 1},
+        to: {color: '#44da82', opacity: 1},
         step: function(state, circle) {
             circle.path.setAttribute('stroke', state.color);
             circle.path.setAttribute('opacity', state.opacity);
@@ -135,5 +133,17 @@ function onScreen(selector) {
 }
 
 function scrollOffset(selector) {
+    // offset from top of window
     return $(selector).offset().top - $(window).scrollTop();
+}
+
+function initAnimations() {
+    // initTimeline();
+}
+
+function animateElements() {
+    // animateHeader();
+    // animateTimeline();
+    // animateProjects();
+    // animateSkills();
 }
