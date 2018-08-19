@@ -64,12 +64,12 @@ header h1 {
     text-transform: uppercase;
     font-weight: bold;
     text-shadow: 2px 0 white;
-    font-size: 30px;
+    font-size: 26px;
     letter-spacing: 3px;
 }
 
 header h2 {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 header nav {
@@ -164,7 +164,6 @@ main > section > .container {
     text-align: center;
     color: white;
     font-size: larger;
-    /*background-image: url('./images/shark-fin-cove-cropped-2.jpg');*/
     background-image: url('./images/shark-fin-cove-2-cropped.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -267,13 +266,14 @@ main > section > .container {
     list-style-type: none;
 }
 
-#resume .timeline .timeline-entry ul > li {
+#resume .timeline .timeline-entry ul > li { /* outer list */
     padding-bottom: 10px;
 }
 
-#resume .timeline .timeline-entry ul > li > ul > li {
-    list-style-type: disc;
-    /*list-style-type: circle;*/
+#resume .timeline .timeline-entry ul > li > ul > li { /* inner-most list */
+    /*list-style-type: disc;*/
+    list-style-type: circle;
+    padding: 0.1em 0;
 }
 
 
@@ -507,7 +507,6 @@ main > section > .container {
     justify-content: center;
     align-items: center;
     background-color: rgba(255,255,255,0.75);
-    /*opacity: 0.75;*/
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -517,7 +516,6 @@ main > section > .container {
 }
 
 #contact nav a:hover {
-    /*opacity: 1;*/
     background-color: rgba(255,255,255,1);
 }
 
@@ -535,7 +533,6 @@ main > section > .container {
 
 .resume-btn:hover {
     background-color: var(--lightgrey-background);
-    /*color: black;*/
     color: var(--soft-green);
 }
 
@@ -559,7 +556,11 @@ footer p {
     /* Header */
 
     header h1 {
-        font-size: 50px;
+        font-size: 40px;
+    }
+
+    header h2 {
+        font-size: 18px;
     }
 
     header img {
@@ -649,6 +650,9 @@ footer p {
 @media only screen and (min-width: 1100px) {
 
     /* Header */
+    header h1 {
+        font-size: 50px;
+    }
 
     /* Main: General */
 
