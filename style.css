@@ -195,6 +195,8 @@ main > section > .container {
 #resume h2 {
     text-align: center;
     padding: 1em;
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     border-radius: 12px;
     background-color: var(--timeline-grey);
@@ -351,6 +353,8 @@ main > section > .container {
 }
 
 #projects .card .btn {
+    width: -webkit-max-content;
+    width: -moz-max-content;
     width: max-content;
     padding: 0.5em 3em;
     border: 1px solid black; /*background-color instead of border?*/
@@ -524,6 +528,10 @@ main > section > .container {
     display: block;
     border: 1px solid white;
     border-radius: 5px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: -ms-max-content;
+    width: -o-max-content;
     width: max-content;
     padding: 1em 3em;
     margin: 0 auto;
