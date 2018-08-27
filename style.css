@@ -173,7 +173,7 @@ main > section > .container {
 
 #blockquote blockquote {
     font-size: 16px;
-    color: #d3d3d3;
+    color: #d8d8d8;
 }
 
 #blockquote span {
@@ -273,11 +273,27 @@ main > section > .container {
 }
 
 #resume .timeline .timeline-entry ul > li > ul > li { /* inner-most list */
-    /*list-style-type: disc;*/
-    list-style-type: circle;
+    list-style-type: none;
     padding: 0.1em 0;
 }
 
+#resume .timeline .timeline-entry ul > li > ul {
+    position: relative;
+}
+
+#resume .timeline .timeline-entry ul > li > ul > li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f120";
+    font-weight: 600;
+    font-size: 0.7em;
+    color: var(--grey-text);
+    position: absolute;
+    left: 14px;
+}
+
+#resume #work-experience .timeline-entry:last-child {
+    padding-bottom: 60px;
+}
 
 
 
@@ -393,11 +409,11 @@ main > section > .container {
     opacity: 0.3;
 }
 
-/*#projects .card:hover .btn {
+#projects .card:hover .btn {
     color: white;
     background-color: var(--bright-green);
     border-color: var(--bright-green);
-}*/
+}
 
 
 /* Skills */
@@ -479,8 +495,9 @@ main > section > .container {
     padding: 16px;
     margin: 16px 0;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0.5;
+    font-family: 'Montserrat';
 }
 
 #contact form input:focus,
@@ -540,10 +557,10 @@ main > section > .container {
 }
 
 .resume-btn:hover {
-    background-color: var(--lightgrey-background);
-    color: var(--soft-green);
+    background-color: var(--bright-green);
+    color: white;
+    border-color: var(--bright-green);
 }
-
 
 
 /* Footer */
