@@ -29,13 +29,13 @@ function initSkills() {
             progress: 0.88,
         },
         '#php': {
-            progress: 0.82,
+            progress: 0.83,
         },
         '#git': {
             progress: 0.80,
         },
         '#html': {
-            progress: 0.76,
+            progress: 0.72,
         },
         '#js': {
             progress: 0.70,
