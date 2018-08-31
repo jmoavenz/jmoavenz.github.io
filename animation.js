@@ -5,10 +5,10 @@ $(document).ready(function() {
     var skills = initSkills();
     animateSkills(skills); // TODO animate when scrolling, fold into other functions
 
-    updateParallax();
+    updateBackgroundImages();
     initAnimations();
     $(window).scroll(function() {
-        updateParallax();
+        updateBackgroundImages();
         animateElements();
     });
 
@@ -108,7 +108,21 @@ function animateSkills(skills) {
     });
 }
 
-function updateParallax() {
+function updateBackgroundImages() {
+    if (/Android|webOS|iPhone|iPad|iPod\BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        fixBackgroundImages();
+    } else {
+        parallaxBackgroundImages();
+    }
+}
+
+function fixBackgroundImages() {
+    applyParallax('header', 1);
+    applyParallax('#blockquote', 1);
+    applyParallax('#contact', 1);
+}
+
+function parallaxBackgroundImages() {
     applyParallax('header', 0.5);
     applyParallax('#blockquote', 0.5);
     applyParallax('#contact', 0.5);
