@@ -109,10 +109,10 @@ function animateSkills(skills) {
 }
 
 function updateBackgroundImages() {
-    if (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini|windows phone/i.test(navigator.userAgent.toLowerCase())) {
-        fixBackgroundImages();
-    } else {
+    if (window.matchMedia("(min-width: 800px)").matches) {
         parallaxBackgroundImages();
+    } else {
+        fixBackgroundImages();
     }
 }
 
