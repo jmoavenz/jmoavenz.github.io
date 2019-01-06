@@ -2,8 +2,8 @@
 
 $(document).ready(function() {
 
-    var skills = initSkills();
-    animateSkills(skills); // TODO animate when scrolling, fold into other functions
+    // var skills = initSkills();
+    // animateSkills(skills); // TODO animate when scrolling, fold into other functions
 
     updateBackgroundImages();
     initAnimations();
