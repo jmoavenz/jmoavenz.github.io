@@ -277,6 +277,10 @@ main > section > .container {
     padding-bottom: 10px;
 }
 
+#resume .timeline .timeline-entry > ul {
+    padding-left: 0px;
+}
+
 #resume .timeline .timeline-entry ul > li > ul > li { /* inner-most list */
     list-style-type: none;
     line-height: 1.2em;
@@ -628,6 +632,12 @@ footer p {
         margin-bottom: 30px;
     }
 
+    /* Resume */
+
+    #resume .timeline .timeline-entry > ul {
+        padding-left: 30px;
+    }
+
     /* Projects */
 
     #projects ul {
@@ -729,6 +739,10 @@ footer p {
     #resume .timeline > ul > li.left i {
         left: auto;
         right: -25px;
+    }
+
+    #resume .timeline > ul > li.left .timeline-entry > ul {
+        padding-right: 10px;
     }
 
 
