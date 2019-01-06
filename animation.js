@@ -14,99 +14,99 @@ $(document).ready(function() {
 
 });
 
-function initSkills() {
-    var skills = {
-        '#python': {
-            progress: 0.93,
-        },
-        '#c': {
-            progress: 0.90,
-        },
-        '#java': {
-            progress: 0.88,
-        },
-        '#r': {
-            progress: 0.88,
-        },
-        '#php': {
-            progress: 0.83,
-        },
-        '#git': {
-            progress: 0.80,
-        },
-        '#html': {
-            progress: 0.72,
-        },
-        '#js': {
-            progress: 0.70,
-        },
-    }
+// function initSkills() {
+//     var skills = {
+//         '#python': {
+//             progress: 0.93,
+//         },
+//         '#c': {
+//             progress: 0.90,
+//         },
+//         '#java': {
+//             progress: 0.88,
+//         },
+//         '#r': {
+//             progress: 0.88,
+//         },
+//         '#php': {
+//             progress: 0.83,
+//         },
+//         '#git': {
+//             progress: 0.80,
+//         },
+//         '#html': {
+//             progress: 0.72,
+//         },
+//         '#js': {
+//             progress: 0.70,
+//         },
+//     }
 
-    Object.keys(skills).map(function(key, index) {
-        var selector = key;
+//     Object.keys(skills).map(function(key, index) {
+//         var selector = key;
 
-        var circle = createProgressBarCircle(selector);
-        skills[key].circle = circle;
+//         var circle = createProgressBarCircle(selector);
+//         skills[key].circle = circle;
 
-        var bar = createProgressBarLine(selector);
-        skills[key].bar = bar;
-    });
+//         var bar = createProgressBarLine(selector);
+//         skills[key].bar = bar;
+//     });
 
-    return skills;
-}
+//     return skills;
+// }
 
-function createProgressBarCircle(selector) {
-    return new ProgressBar.Circle(selector+' .circle', getProgressBarStyle());
-}
+// function createProgressBarCircle(selector) {
+//     return new ProgressBar.Circle(selector+' .circle', getProgressBarStyle());
+// }
 
-function createProgressBarLine(selector) {
-    return new ProgressBar.Line(selector+' .bar', getProgressBarStyle());
-}
+// function createProgressBarLine(selector) {
+//     return new ProgressBar.Line(selector+' .bar', getProgressBarStyle());
+// }
 
-function getProgressBarStyle() {
-    return {
-        strokeWidth: 3,
-        trailWidth: 3,
-        easing: 'easeInOut',
-        duration: 1400,
-        text: {
-            autoStyleContainer: false,
-            style: { // TODO move text styling to css by using className
-                color: '#aaa',
-                fontSize: '22px',
-                position: 'absolute',
-                top: '55%',
-                width: '100%', 
-            },
-        },
+// function getProgressBarStyle() {
+//     return {
+//         strokeWidth: 3,
+//         trailWidth: 3,
+//         easing: 'easeInOut',
+//         duration: 1400,
+//         text: {
+//             autoStyleContainer: false,
+//             style: { // TODO move text styling to css by using className
+//                 color: '#aaa',
+//                 fontSize: '22px',
+//                 position: 'absolute',
+//                 top: '55%',
+//                 width: '100%', 
+//             },
+//         },
 
-        from: {color: '#aaa', opacity: 0.1},
-        to: {color: '#44da82', opacity: 1},
-        step: function(state, circle) {
-            circle.path.setAttribute('stroke', state.color);
-            circle.path.setAttribute('opacity', state.opacity);
+//         from: {color: '#aaa', opacity: 0.1},
+//         to: {color: '#44da82', opacity: 1},
+//         step: function(state, circle) {
+//             circle.path.setAttribute('stroke', state.color);
+//             circle.path.setAttribute('opacity', state.opacity);
 
-            var value = Math.round(circle.value() * 100);
-            if (value === 0) {
-                circle.setText('');
-            } else {
-                circle.setText(value+'%');
-            }
-        },
-    };
-}
+//             var value = Math.round(circle.value() * 100);
+//             if (value === 0) {
+//                 circle.setText('');
+//             } else {
+//                 circle.setText(value+'%');
+//             }
+//         },
+//     };
+// }
 
-function animateSkills(skills) {
-    Object.keys(skills).map(function(key, index) {
-        var progress = skills[key].progress;
+// function animateSkills(skills) {
+//     Object.keys(skills).map(function(key, index) {
+//         var progress = skills[key].progress;
 
-        var circle = skills[key].circle;
-        circle.animate(progress);
+//         var circle = skills[key].circle;
+//         circle.animate(progress);
 
-        var bar = skills[key].bar;
-        bar.animate(progress);
-    });
-}
+//         var bar = skills[key].bar;
+//         bar.animate(progress);
+//     });
+// }
 
 function updateBackgroundImages() {
     if (window.matchMedia("(min-width: 800px)").matches) {
