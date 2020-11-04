@@ -233,7 +233,7 @@ main > section > .container {
     padding-bottom: 100px;
 }
 
-#resume .timeline .timeline-entry i {
+#resume .timeline .timeline-entry > i {
     color: white;
     display: flex;
     justify-content: center;
